@@ -1,0 +1,78 @@
+:root {
+    --main-color: #C778DD;
+    --bg-color: #282C33;
+    --gray-color: #ABB2BF;
+    --white: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background-color: var(--bg-color); color: var(--white); font-family: 'Courier New', monospace; line-height: 1.6; overflow-x: hidden; }
+
+.container { max-width: 1024px; margin: 0 auto; padding: 0 20px; }
+span { color: var(--main-color); }
+
+/* Header & Nav */
+header { padding: 20px 0; position: sticky; top: 0; background: var(--bg-color); border-bottom: 1px solid #4b5563; z-index: 1000; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+#menu-check { display: none; }
+
+.menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.bar { width: 25px; height: 3px; background: var(--white); }
+
+.nav-menu { display: flex; list-style: none; gap: 30px; }
+.nav-menu a { color: var(--gray-color); text-decoration: none; }
+
+/* Sections */
+section { padding: 60px 0; }
+.section-header { display: flex; align-items: center; gap: 15px; margin-bottom: 40px; }
+.section-header hr { flex-grow: 1; border: none; height: 1px; background: var(--main-color); }
+
+/* Grid */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.project-card { border: 1px solid var(--gray-color); }
+.tech-stack { border-bottom: 1px solid var(--gray-color); padding: 5px; color: var(--gray-color); font-size: 0.8rem; }
+.card-body { padding: 15px; }
+
+/* Forms & Buttons */
+.contact-form { display: flex; flex-direction: column; gap: 10px; max-width: 500px; }
+.contact-form input, .contact-form textarea { background: transparent; border: 1px solid var(--gray-color); padding: 10px; color: white; width: 100%; }
+.btn { border: 1px solid var(--main-color); color: white; padding: 10px 20px; text-decoration: none; display: inline-block; background: transparent; cursor: pointer; }
+
+/* Quote */
+.quote-box { border: 1px solid var(--gray-color); padding: 20px; text-align: center; width: 100%; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .menu-toggle { display: flex; }
+    .nav-menu { position: fixed; top: 70px; right: -100%; flex-direction: column; background: var(--bg-color); width: 100%; height: 100vh; text-align: center; padding-top: 50px; transition: 0.4s; }
+    #menu-check:checked ~ .nav-menu { right: 0; }
+}
+
+footer { padding: 40px 0; border-top: 1px solid #4b5563; margin-top: 50px; }
+.footer-content { display: flex; justify-content: space-between; margin-bottom: 20px; }
+.copyright { text-align: center; color: var(--gray-color); font-size: 0.8rem; }
+
+/* Contenedor para centrar la foto */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 250px;  /* Aumentamos el ancho */
+    height: 250px; /* Aumentamos el alto */
+    border-radius: 50%; /* Mantiene la forma circular */
+    border: 3px solid var(--main-color);
+    object-fit: cover;
+    margin-bottom: 25px; /* Espacio con el texto de abajo */
+}
+
+/* Opcional: Para que en celulares no ocupe toda la pantalla */
+@media (max-width: 600px) {
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+}

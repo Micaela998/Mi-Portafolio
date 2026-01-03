@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micaela Agustina Martinez | Portfolio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo"><span>#</span>micaela-martinez</div>
+            
+            <input type="checkbox" id="menu-check">
+            <label for="menu-check" class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+
+            <ul class="nav-menu">
+                <li><a href="#home"><span>#</span>inicio</a></li>
+                <li><a href="#proyectos"><span>#</span>proyectos</a></li>
+                <li><a href="#habilidades"><span>#</span>habilidades</a></li>
+                <li><a href="#contacto"><span>#</span>contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section id="home" class="hero">
+    <div class="hero-content">
+        <div class="profile-container">
+            <img src="perfil.jpg" alt="Foto de Micaela Martinez" class="profile-img">
+        </div>
+        
+        <h1>Micaela Agustina Martinez es <span>desarrolladora frontend</span></h1>
+        <p>Enfocada en crear soluciones web modernas y funcionales.</p>
+        <a href="#contacto" class="btn">¡Contáctame!</a>
+    </div>
+</section>
+
+        <section id="proyectos">
+            <div class="section-header">
+                <h2><span>#</span>proyectos</h2>
+                <hr>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <img src="https://via.placeholder.com/300x150" alt="Vista previa proyecto">
+                    <div class="tech-stack">HTML CSS JS</div>
+                    <div class="card-body">
+                        <h3>Mi Primer Proyecto</h3>
+                        <p>Desarrollo de una interfaz responsiva aplicando conceptos de Layout y Grid.</p>
+                        <a href="#" target="_blank" class="btn">Ver Sitio</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <div class="section-header">
+                <h2><span>#</span>habilidades</h2>
+                <hr>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="tech-stack">Lenguajes</div>
+                    <div class="card-body">
+                        <p><strong>Python:</strong> Inicial</p>
+                        <p><strong>JavaScript:</strong> Inicial</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="tech-stack">Frontend</div>
+                    <div class="card-body">
+                        <p><strong>HTML:</strong> Intermedio</p>
+                        <p><strong>CSS:</strong> Intermedio</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <div class="quote-box">
+                <p>"El único modo de hacer un gran trabajo es amar lo que haces."</p>
+                <span>- Steve Jobs</span>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <div class="section-header">
+                <h2><span>#</span>contacto</h2>
+                <hr>
+            </div>
+            <div class="contact-content">
+                <p style="margin-bottom: 20px;">Estoy interesada en oportunidades freelance o posiciones fijas. ¡Hablemos!</p>
+                
+                <form action="https://formspree.io/f/mvzgqzyb" method="POST" class="contact-form">
+                    <label>Nombre Completo</label>
+                    <input type="text" name="nombre" placeholder="Micaela Martinez" required>
+
+                    <label>Tu Correo Electrónico</label>
+                    <input type="email" name="email" placeholder="tu@email.com" required>
+
+                    <label>Tu Mensaje</label>
+                    <textarea name="mensaje" rows="5" placeholder="Hola Micaela, me gustaría trabajar contigo..." required></textarea>
+                    
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <p><span>#</span>micaela-
