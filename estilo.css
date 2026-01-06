@@ -142,6 +142,13 @@ section {
     background: rgba(171, 178, 191, 0.05); /* Un toque de fondo para resaltar */
 }
 
+.project-card img {
+    width: 100%;       /* Ocupa todo el ancho de la tarjeta */
+    height: 200px;     /* Altura fija para que todas las tarjetas midan lo mismo */
+    object-fit: cover; /* Hace que la imagen se recorte solita sin estirarse */
+    display: block;    /* Quita espacios extra abajo de la imagen */
+}
+
 .tech-stack { 
     border-bottom: 1px solid var(--gray-color); 
     padding: 8px; 
@@ -246,3 +253,215 @@ footer {
     
     section { padding: 60px 0; }
 }
+/* HEADER & NAV */
+header { 
+    padding: 20px 0; 
+    position: sticky; 
+    top: 0; 
+    background: var(--bg-color); 
+    border-bottom: 1px solid #4b5563; 
+    z-index: 1000; 
+}
+
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+#menu-check { 
+    display: none; 
+}
+
+.menu-toggle { 
+    display: none; 
+    flex-direction: column; 
+    gap: 5px; 
+    cursor: pointer; 
+}
+
+.bar { 
+    width: 25px; 
+    height: 3px; 
+    background: var(--white); 
+}
+
+.nav-menu { 
+    display: flex; 
+    list-style: none; 
+    gap: 30px; 
+}
+
+.nav-menu a { 
+    color: var(--gray-color); 
+    text-decoration: none; 
+}
+
+/* SECCIONES - AJUSTE DE MÁRGENES (Sugerencia del Profe) */
+section { 
+    padding: 100px 0; /* Aumentamos el margen superior e inferior para más prolijidad */
+}
+
+.section-header { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    margin-bottom: 50px; /* Más espacio antes del contenido */
+}
+
+.section-header hr { 
+    flex-grow: 1; 
+    border: none; 
+    height: 1px; 
+    background: var(--main-color); 
+}
+
+/* HERO / HOME */
+.hero-content {
+    text-align: center; /* Centramos el contenido de la presentación */
+}
+
+.hero-content h1 {
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FOTO DE PERFIL */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid var(--main-color);
+    object-fit: cover;
+    margin-bottom: 25px;
+}
+
+/* PROYECTOS & HABILIDADES GRID */
+.projects-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px; /* Aumentamos espacio entre tarjetas */
+}
+
+.project-card { 
+    border: 1px solid var(--gray-color); 
+    background: rgba(171, 178, 191, 0.05); /* Un toque de fondo para resaltar */
+}
+
+.tech-stack { 
+    border-bottom: 1px solid var(--gray-color); 
+    padding: 8px; 
+    color: var(--gray-color); 
+    font-size: 0.8rem; 
+}
+
+.card-body { 
+    padding: 20px; 
+}
+
+/* FORMULARIO DE CONTACTO - AJUSTE DE DISEÑO */
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centramos el formulario */
+    text-align: center;
+}
+
+.contact-form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    width: 100%;
+    max-width: 500px; 
+    margin-top: 30px;
+}
+
+.contact-form label {
+    text-align: left; /* Las etiquetas quedan a la izquierda del input */
+    font-size: 0.9rem;
+}
+
+.contact-form input, .contact-form textarea { 
+    background: transparent; 
+    border: 1px solid var(--gray-color); 
+    padding: 12px; 
+    color: white; 
+    width: 100%; 
+}
+
+.btn { 
+    border: 1px solid var(--main-color); 
+    color: white; 
+    padding: 12px 25px; 
+    text-decoration: none; 
+    display: inline-block; 
+    background: transparent; 
+    cursor: pointer; 
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: rgba(199, 120, 221, 0.1);
+}
+
+/* CITA (QUOTE) */
+.quote-box { 
+    border: 1px solid var(--gray-color); 
+    padding: 40px; 
+    text-align: center; 
+    width: 100%; 
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* FOOTER */
+footer { 
+    padding: 60px 0 20px 0; 
+    border-top: 1px solid #4b5563; 
+    margin-top: 50px; 
+}
+
+.footer-content { 
+    display: flex; 
+    justify-content: center; /* Centramos el contenido del footer */
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .menu-toggle { display: flex; }
+    .nav-menu { 
+        position: fixed; 
+        top: 70px; 
+        right: -100%; 
+        flex-direction: column; 
+        background: var(--bg-color); 
+        width: 100%; 
+        height: 100vh; 
+        text-align: center; 
+        padding-top: 50px; 
+        transition: 0.4s; 
+    }
+    #menu-check:checked ~ .nav-menu { right: 0; }
+    
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    section { padding: 60px 0; }
+}
+
